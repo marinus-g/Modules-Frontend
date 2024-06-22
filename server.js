@@ -3,6 +3,7 @@ const path = require('path');
 const helmet = require('helmet');
 const app = express();
 
+// TODO: remove google fonts and unsafe-inline css
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
