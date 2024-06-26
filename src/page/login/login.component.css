@@ -1,0 +1,132 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /*
+  background-image: var(--bg-gradient-sand-stone);
+  background-size: cover;
+   */
+  background-color: var(--change);
+  width: max-content;
+  height: 100vh;
+  text-align: center;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+.image-container {
+  background-image: url("../../../public/assets/img/hero-image.png");
+  background-size: cover;
+}
+
+.container {
+
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 39px;
+  margin-right: 39px;
+
+  /*
+  padding-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+   */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-family: var(--calibre-m), serif;
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--snow);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--calibre-m), serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--stone);
+  text-align: center;
+}
+
+h3 {
+  text-wrap: wrap;
+  font-family: var(--calibre-m), serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--snow);
+  text-align: center;
+}
+
+
+.heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.subheading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  max-width: 50%;
+}
+
+.login-card {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  width: 60%;
+  height: 20%;
+  background-color: var(--snow);;
+  border-radius: 20px;
+  border-style: none;
+  color: var(--change);
+}
+
+.login-card h3 {
+  color: var(--panther);
+}
+
+.login-card-header {
+  margin-top: 0;
+  justify-content: center;
+  width: 80%;
+}
+
+.login-card-button {
+  background-image: url("../../../public/assets/img/microsoft-login.svg");
+  background-size: contain;
+  height: 20%;
+  width: 35%;
+}
