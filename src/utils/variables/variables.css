@@ -1,26 +1,26 @@
 @font-face {
   font-family: 'Calibre-B';
-  src: url('./assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Bold.otf');
+  src: url('../../../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Bold.otf');
 }
 
 @font-face {
   font-family: 'Calibre-M';
-  src: url('./assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Medium.otf');
+  src: url('../../../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Medium.otf');
 }
 
 @font-face {
   font-family: 'Calibre-R';
-  src: url('./assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Regular.otf');
+  src: url('../../../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Regular.otf');
 }
 
 @font-face {
   font-family: 'Northwell Clean Alt';
-  src: url('./assets/fonts/fonts/Northwell (New Update)/Northwell Clean/Northwell Clean Alt.ttf');
+  src: url('../../../public/assets/fonts/fonts/Northwell (New Update)/Northwell Clean/Northwell Clean Alt.ttf');
 }
 
 @font-face {
   font-family: 'Realtime Rounded';
-  src: url('./assets/fonts/fonts/Realtime Rounded/Juri Zaech - Realtime Rounded.otf')
+  src: url('../../../public/assets/fonts/fonts/Realtime Rounded/Juri Zaech - Realtime Rounded.otf')
 }
 
 root {
@@ -42,15 +42,15 @@ root {
   --calibre-m: 'Calibre-M', sans-serif;
   --calibre-r: 'Calibre-R', sans-serif;
 
-  --landscape-light: url('src/assets/logo/logo/RGB/SVG/LOGO_L_NEG_RGB.svg');
-  --landscape-dark: url('src/assets/logo/logo/RGB/SVG/LOGO_L_POS_RGB.svg');
-  --portrait-light: url('src/assets/logo/logo/RGB/SVG/LOGO_P_NEG_RGB.svg');
-  --portrait-dark: url('src/assets/logo/logo/RGB/SVG/LOGO_P_POS_RGB.svg');
-  --spot-mustart: url('src/assets/shapes/shapes/spot-mustard/spot-mustard.svg');
-  --waves-sand: url(src/assets/shapes/shapes/wave-sand/wave-sand.svg);
-  --waves-sand-upwards: url('src/assets/shapes/shapes/wave-sand-upward/wave-sand-upward.svg');
+  --landscape-light: url('../../../public/assets/logo/logo/RGB/SVG/LOGO_L_NEG_RGB.svg');
+  --landscape-dark: url('../../../public/assets/logo/logo/RGB/SVG/LOGO_L_POS_RGB.svg');
+  --portrait-light: url('../../../public/assets/logo/logo/RGB/SVG/LOGO_P_NEG_RGB.svg');
+  --portrait-dark: url('../../../public/assets/logo/logo/RGB/SVG/LOGO_P_POS_RGB.svg');
+  --spot-mustart: url('../../../public/assets/shapes/shapes/spot-mustard/spot-mustard.svg');
+  --waves-sand: url(../../../public/assets/shapes/shapes/wave-sand/wave-sand.svg);
+  --waves-sand-upwards: url('../../../public/assets/shapes/shapes/wave-sand-upward/wave-sand-upward.svg');
 
-  --bg-gradient-change: url('src/assets/backgrounds/bg-gradient-change.svg');
-  --bg-gradient-panther: url('src/assets/backgrounds/bg-gradient-panther.svg');
-  --bg-gradient-sand-stone: url('src/assets/backgrounds/bg-gradient-sand-stone.svg');
+  --bg-gradient-change: url('../../../public/assets/backgrounds/bg-gradient-change.svg');
+  --bg-gradient-panther: url('../../../public/assets/backgrounds/bg-gradient-panther.svg');
+  --bg-gradient-sand-stone: url('../../../public/assets/backgrounds/bg-gradient-sand-stone.svg');
 }

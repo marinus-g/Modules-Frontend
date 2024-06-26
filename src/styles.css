@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Calibre-B';
+  src: url('../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Calibre-M';
+  src: url('../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Calibre-R';
+  src: url('../public/assets/fonts/fonts/Calibre/DesktopFonts/Calibre-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Northwell Clean Alt';
+  src: url('../public/assets/fonts/fonts/Northwell (New Update)/Northwell Clean/Northwell Clean Alt.ttf');
+}
+
+@font-face {
+  font-family: 'Realtime Rounded';
+  src: url('../public/assets/fonts/fonts/Realtime Rounded/Juri Zaech - Realtime Rounded.otf')
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+:root {
+  --white: #ffffff;
+  --snow: #f9f9f9;
+  --paper: #ededed;
+  --sand: #ede6dc;
+  --mustard: #d69603;
+  --stone: #a5a5a5;
+  --panther: #27323f;
+  --midnight: #1a222a;
+  --change: #002a5c;
+  --portfolio: #ccff99;
+  --warning: #ff6698;
+
+  --northwell: 'Northwell Clean Alt', sans-serif;
+  --realtime: 'Realtime Rounded', sans-serif;
+  --calibre-b: 'Calibre-B', sans-serif;
+  --calibre-m: 'Calibre-M', sans-serif;
+  --calibre-r: 'Calibre-R', sans-serif;
+
+  --landscape-light: url('../public/assets/logo/logo/RGB/SVG/LOGO_L_NEG_RGB.svg');
+  --landscape-dark: url('../public/assets/logo/logo/RGB/SVG/LOGO_L_POS_RGB.svg');
+  --portrait-light: url('../public/assets/logo/logo/RGB/SVG/LOGO_P_NEG_RGB.svg');
+  --portrait-dark: url('../public/assets/logo/logo/RGB/SVG/LOGO_P_POS_RGB.svg');
+  --spot-mustart: url('../public/assets/shapes/shapes/spot-mustard/spot-mustard.svg');
+  --waves-sand: url(../public/assets/shapes/shapes/wave-sand/wave-sand.svg);
+  --waves-sand-upwards: url('../public/assets/shapes/shapes/wave-sand-upward/wave-sand-upward.svg');
+
+  --bg-gradient-change: url('../public/assets/backgrounds/bg-gradient-change.svg');
+  --bg-gradient-panther: url('../public/assets/backgrounds/bg-gradient-panther.svg');
+  --bg-gradient-sand-stone: url('../public/assets/backgrounds/bg-gradient-sand-stone.svg');
+}
