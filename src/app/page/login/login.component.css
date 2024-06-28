@@ -31,7 +31,7 @@
 }
 
 .image-container {
-  background-image: url("../../../public/assets/img/hero-image.png");
+  background-image: url("../../../../public/assets/img/hero-image.png");
   background-size: cover;
 }
 
@@ -77,7 +77,7 @@ h2 {
 h3 {
   text-wrap: wrap;
   font-family: var(--calibre-m), serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
   color: var(--snow);
   text-align: center;
