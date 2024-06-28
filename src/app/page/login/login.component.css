@@ -13,10 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  /*
-  background-image: var(--bg-gradient-sand-stone);
-  background-size: cover;
-   */
   background-color: var(--change);
   width: max-content;
   height: 100vh;
@@ -33,10 +29,6 @@
 .image-container {
   background-image: url("../../../../public/assets/img/hero-image.png");
   background-size: cover;
-}
-
-.container {
-
 }
 
 .title-container {
