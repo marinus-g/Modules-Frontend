@@ -1,0 +1,116 @@
+{
+  "classes": [
+    {
+      "class-name": "Maul"
+    },
+    {
+      "class-name": "Tyranus"
+    },
+    {
+      "class-name": "Vader"
+    },
+    {
+      "class-name": "Sidious"
+    }
+  ],
+  "table": [
+    {
+      "table-name": "Dark Side Basics",
+      "date": "2022-06-28",
+      "description": "Nein. Ich bin dein Vater!",
+      "lzk": "3",
+      "project": "1"
+    },
+    {
+      "table-name": "Slay Jedi Junglings",
+      "date": "2022-06-20",
+      "description": "Execute Order 66",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Talon",
+      "date": "2022-06-05",
+      "description": "Smash dat Twilek Bitch",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith Alchemy",
+      "date": "2022-06-05",
+      "description": "Its not Potions",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Force Lightning",
+      "date": "2022-06-05",
+      "description": "BZZZZ",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    },
+    {
+      "table-name": "Sith History Darth Bane",
+      "date": "2022-06-05",
+      "description": "There are only two.",
+      "lzk": "n.A.",
+      "project": "1"
+    }
+  ]
+}
