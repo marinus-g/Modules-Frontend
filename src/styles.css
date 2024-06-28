@@ -23,6 +23,11 @@
   src: url('../public/assets/fonts/fonts/Realtime Rounded/Juri Zaech - Realtime Rounded.otf')
 }
 
+@font-face {
+  font-family: 'Segeo UI';
+  src: url('../public/assets/fonts/fonts/segeo/Segoe UI.ttf')
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -48,6 +53,7 @@ body {
   --calibre-b: 'Calibre-B', sans-serif;
   --calibre-m: 'Calibre-M', sans-serif;
   --calibre-r: 'Calibre-R', sans-serif;
+  --segeo-ui: 'Segeo UI', sans-serif;
 
   --landscape-light: url('../public/assets/logo/logo/RGB/SVG/LOGO_L_NEG_RGB.svg');
   --landscape-dark: url('../public/assets/logo/logo/RGB/SVG/LOGO_L_POS_RGB.svg');
