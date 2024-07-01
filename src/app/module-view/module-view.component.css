@@ -28,7 +28,7 @@ body {
 
 .module-view-search {
   display: flex;
-  position:relative;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   margin: 20px 0;
@@ -39,18 +39,20 @@ body {
 }
 
 .module-view-table {
-  max-height: 80%;
+  height: calc(100% - 150px);
+  display: flex;
+  flex-direction: column;
 }
 
-table, th {
-  border-collapse: collapse;
+th, td {
   border: 1px solid #525252;
+  text-align: center;
 }
 
 table {
-  width: 100%;
-  height: 100%;
+  width: 99%;
   table-layout: fixed;
+  border-collapse: collapse;
 }
 
 td {
@@ -62,7 +64,21 @@ tr:nth-child(even) {
   background-color: var(--white);
 }
 
-.table-body {
-  height: 100%;
-  overflow: scroll;
+.table-body-wrapper {
+  overflow-y: auto;
+  flex: 1;
 }
+
+.table-body {
+  display: block;
+}
+
+.table-body tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+
+
