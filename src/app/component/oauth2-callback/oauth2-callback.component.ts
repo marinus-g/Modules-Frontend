@@ -16,6 +16,9 @@ export class OAuth2CallbackComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const code = params['code'];
+      for (let paramsKey in params) {
+        console.log(paramsKey, params[paramsKey])
+      }
       if (code) {
         console.log('code', code);
         this.router.navigate(['/']);
