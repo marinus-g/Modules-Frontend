@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-oauth2-callback',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, HttpClientModule],
+  providers: [HttpClient],
   templateUrl: './oauth2-callback.component.html',
   styleUrl: './oauth2-callback.component.css'
 })
