@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'oauth2/code/azure',
+    path: 'login/oauth2/code/azure',
     title: 'Microsoft Login',
     component: OAuth2CallbackComponent
   }
