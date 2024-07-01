@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-oauth2-callback',
@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class OAuth2CallbackComponent implements OnInit {
 
-  constructor(private route: Router) {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
