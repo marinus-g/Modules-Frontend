@@ -22,10 +22,21 @@ export class OAuth2CallbackComponent implements OnInit {
       for (let paramsKey in params) {
         console.log(paramsKey, params[paramsKey])
       }
-      this.http.get<String>('https://academy-u202309-030-16e3810602c5.herokuapp.com/hello')
-        .subscribe(data => {
-          console.log(data);
-        });
+      this.http.post('https://academy-u202309-030-16e3810602c5.herokuapp.com/oauth/token', { code })
+        .subscribe(
+          (response: any) => {
+            console.log('Token response:', response);
+         //   this.authService.setAccessToken(response.access_token);
+
+            const redirectUrl = localStorage.getItem('redirectUrl') || '/';
+            localStorage.removeItem('redirectUrl');
+            this.router.navigateByUrl(redirectUrl);
+          },
+          error => {
+            console.error('Error exchanging code for token:', error);
+            this.router.navigate(['/error']);
+          }
+        );
       if (code) {
         console.log('code', code);
         this.router.navigate(['/']);
