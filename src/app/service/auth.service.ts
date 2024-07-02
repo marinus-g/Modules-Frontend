@@ -14,7 +14,8 @@ export class AuthService {
 
   startAuthentication(redirect: string) {
     localStorage.setItem('authRedirect', redirect);
-    window.location.href = 'https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/microsoft';
+    //window.location.href = 'https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/microsoft';
+    window.location.href = 'http://localhost:8080/auth/microsoft';
   }
 
   isAuthenticated() {
@@ -29,7 +30,8 @@ export class AuthService {
   handleAuthentication(code: string) {
     if (code) {
       console.log('Code:', code);
-      this.http.post('https://academy-u202309-030-16e3810602c5.herokuapp.com/oauth/token', { code }, {
+     // this.http.post('https://academy-u202309-030-16e3810602c5.herokuapp.com/oauth/token', { code }, {
+      this.http.post('http://localhost:8080/oauth/token', { code }, {
         observe: 'response',
         withCredentials: true,
       })
@@ -38,7 +40,7 @@ export class AuthService {
             console.log('Token response:', response.body);
             const redirectUrl = localStorage.getItem('redirectUrl') || '/';
             localStorage.removeItem('authRedirect');
-            this.router.navigateByUrl(redirectUrl);
+       //     this.router.navigateByUrl(redirectUrl);
           },
           error => {
             console.error('Error exchanging code for token:', error);

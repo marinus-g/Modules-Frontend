@@ -11,7 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "heroku-postbuild": "ng build --configuration production",
     "test": "ng test",
-    "dev": "ng serve --open --port 8080"
+    "dev": "ng serve --open"
   },
   "private": true,
   "dependencies": {
