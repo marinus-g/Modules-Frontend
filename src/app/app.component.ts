@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("TESTYTEST")
-    this.http.get('http://localhost:8080/hello', {
+    this.http.get('https://academy-u202309-031-2febaeeb9a88.herokuapp.com/hello', {
       withCredentials: true,
       headers: {
         'Content-Type': 'application/json',
