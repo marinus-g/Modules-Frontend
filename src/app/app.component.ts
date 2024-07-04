@@ -17,21 +17,6 @@ export class AppComponent implements OnInit {
   title = 'Modules-Frontend';
 
   ngOnInit(): void {
-    console.log("TESTYTEST")
-    this.http.get('https://academy-u202309-031-2febaeeb9a88.herokuapp.com/hello', {
-      withCredentials: true,
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
 
-      }
-    }).subscribe(
-      response => {
-        console.log('Hello response:', response);
-      },
-      error => {
-        console.error('Error calling /hello:', error);
-      }
-    );
   }
 }
