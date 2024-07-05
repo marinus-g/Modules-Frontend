@@ -11,7 +11,7 @@ app.use(helmet({
       scriptSrc: ["'self'", "http://localhost:8080"],
       imgSrc: ["'self'", "data:", "http://localhost:8080"],
       styleSrc: ["'self'", "http://localhost:8080", "https://fonts.googleapis.com", "'unsafe-inline'"],
-      connectSrc: ["'self'", "http://localhost:8080"],
+      connectSrc: ["'self'", "http://localhost:8080", "https://academy-u202309-030-16e3810602c5.herokuapp.com"],
       fontSrc: ["'self'", "http://localhost:8080", "https://fonts.gstatic.com"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: [],
