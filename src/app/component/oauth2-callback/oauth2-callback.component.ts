@@ -17,9 +17,6 @@ export class OAuth2CallbackComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      const code = params['code'];
-      this.authService.handleAuthentication(code);
-    });
+    this.authService.handleAuthentication();
   }
 }
