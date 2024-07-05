@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
+import {Authentication} from "../model/authentication";
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +19,6 @@ export class AuthService {
     // window.location.href = 'http://localhost:8080/auth/microsoft';
   }
 
-  isAuthenticated() {
-    return localStorage.getItem('authToken') !== null;
-  }
 
   logout() {
     this.cookieService.delete('code')
@@ -35,6 +33,22 @@ export class AuthService {
         this.router.navigateByUrl(redirectUrl);
       }
     }
+  }
+
+  isAuthenticated(): boolean {
+    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated')
+      .subscribe(auth => {
+        return auth.authenticated;
+      })
+    return false;
+  }
+
+  getAuthentication(): Authentication {
+    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated')
+      .subscribe(auth => {
+        return auth;
+      })
+    return {authenticated: false, role: ''};
   }
 
 }
