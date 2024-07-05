@@ -35,9 +35,7 @@ export class AuthService {
       localStorage.removeItem('authRedirect');
       console.log('redirectUrl', redirectUrl)
       if (redirectUrl) {
-        setTimeout(() => {
           this.router.navigateByUrl(redirectUrl);
-        }, 1000);
       }
     }
   }
