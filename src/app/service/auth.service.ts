@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated')
+    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated', {withCredentials: true})
       .subscribe(auth => {
         return auth.authenticated;
       })
@@ -44,7 +44,7 @@ export class AuthService {
   }
 
   getAuthentication(): Authentication {
-    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated')
+    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated', {withCredentials: true})
       .subscribe(auth => {
         return auth;
       })
