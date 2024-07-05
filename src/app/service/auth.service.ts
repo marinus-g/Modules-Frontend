@@ -16,6 +16,7 @@ export class AuthService {
 
   startAuthentication(redirect: string) {
     localStorage.setItem('authRedirect', redirect);
+    console.log("startAuthentication")
     window.location.href = 'https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/microsoft';
     // window.location.href = 'http://localhost:8080/auth/microsoft';
   }
