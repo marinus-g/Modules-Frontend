@@ -10,7 +10,8 @@
     "start": "node server.js",
     "watch": "ng build --watch --configuration development",
     "heroku-postbuild": "ng build --configuration production",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "ng serve --open"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "@angular/router": "^18.0.0",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
+    "ngx-cookie-service": "^18.0.0",
     "path": "^0.12.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
