@@ -6,7 +6,7 @@
     <div class="searchbar">
       <input type="search" placeholder="Suche"/>
       <button type="submit">
-        <img src="../public/icons/search.svg" alt="go"/>
+        go
       </button>
     </div>
     <div class="dropdown">
@@ -37,7 +37,8 @@
     <div class="table-body-wrapper">
       <table>
         <tbody class="table-body">
-        <tr *ngFor="let item of tableData" [routerLink]="['/detail', item.id]">
+        <tr *ngFor="let item of tableData"
+            (click)="navigateToDetail(item.id)">
           <td>{{ item['table-name'] }}</td>
           <td>{{ item.date }}</td>
           <td>{{ item.description }}</td>

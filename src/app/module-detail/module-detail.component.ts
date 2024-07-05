@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {DataService} from "../Service/data.service";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-module-detail',
@@ -11,18 +9,4 @@ import {DataService} from "../Service/data.service";
 })
 export class ModuleDetailComponent {
 
-  item: any;
-
-  constructor(
-    private route: ActivatedRoute,
-    private dataService: DataService
-  )
-  {}
-
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.dataService.getItem(id).subscribe(item => {
-      this.item = item;
-    });
-  }
 }

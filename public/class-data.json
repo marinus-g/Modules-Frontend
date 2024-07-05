@@ -15,6 +15,7 @@
   ],
   "table": [
     {
+      "id": "1",
       "table-name": "Dark Side Basics",
       "date": "2022-06-28",
       "description": "Nein. Ich bin dein Vater!",
@@ -22,6 +23,7 @@
       "project": "1"
     },
     {
+      "id": "2",
       "table-name": "Slay Jedi Junglings",
       "date": "2022-06-20",
       "description": "Execute Order 66",
@@ -29,6 +31,7 @@
       "project": "1"
     },
     {
+      "id": "3",
       "table-name": "Sith History Darth Bane",
       "date": "2022-06-05",
       "description": "There are only two.",

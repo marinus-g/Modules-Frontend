@@ -1,16 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {MatIcon} from "@angular/material/icon";
 import {DataService} from "../Service/data.service";
-import {NgForOf} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import {NgForOf, NgOptimizedImage} from "@angular/common";
+import {RouterLink, Router} from "@angular/router";
 
 @Component({
   selector: 'app-module-view',
   standalone: true,
   imports: [
-    MatIcon,
     NgForOf,
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './module-view.component.html',
   styleUrl: './module-view.component.css'
@@ -19,7 +18,7 @@ export class ModuleViewComponent implements OnInit {
   classesData: any;
   tableData: any;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router: Router) {
   }
 
   ngOnInit() {
@@ -27,5 +26,9 @@ export class ModuleViewComponent implements OnInit {
       this.classesData = data.classes;
       this.tableData = data.table;
     });
+  }
+
+  navigateToDetail(itemId: number) {
+    this.router.navigate(['/detail', itemId]);
   }
 }

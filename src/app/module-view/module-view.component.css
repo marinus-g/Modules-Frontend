@@ -60,6 +60,18 @@ td {
 
 }
 
+tr:hover {
+  cursor:pointer;
+}
+
+tr:hover td{
+  color: var(--table-highlight);
+}
+
+.hover-effect td {
+  background-color: var(--table-highlight);
+}
+
 tr:nth-child(even) {
   background-color: var(--white);
 }
