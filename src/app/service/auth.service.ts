@@ -48,7 +48,7 @@ export class AuthService {
       .subscribe(auth => {
         return auth;
       })
-    return {authenticated: false, role: ''};
+    return {authenticated: false, roles: []};
   }
 
 }
