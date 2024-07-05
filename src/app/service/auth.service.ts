@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpResponse} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {Authentication} from "../model/authentication";
+import {firstValueFrom, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -35,20 +36,14 @@ export class AuthService {
     }
   }
 
-  isAuthenticated(): boolean {
-    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated', {withCredentials: true})
-      .subscribe(auth => {
-        return auth.authenticated;
-      })
-    return false;
+  async isAuthenticated(): Promise<boolean> {
+     return await this.getAuthentication().then(value => value.authenticated)
   }
 
-  getAuthentication(): Authentication {
-    this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated', {withCredentials: true})
-      .subscribe(auth => {
-        return auth;
-      })
-    return {authenticated: false, roles: []};
+  getAuthentication(): Promise<Authentication> {
+    const response$ =  this.http.get<Authentication>('https://academy-u202309-030-16e3810602c5.herokuapp.com/auth/authenticated', {
+      withCredentials: true},
+    )
+    return firstValueFrom(response$)
   }
-
 }
