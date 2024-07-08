@@ -11,10 +11,10 @@ export class ModuleService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get(`${environment.apiUrl}/modules`);
+    return this.http.get(`https://academy-u202309-030-16e3810602c5.herokuapp.com//modules`);
   }
 
   searchModules(name: string): Observable<any>{
-    return this.http.get(`${environment.apiUrl}/modules/search/${name}`);
+    return this.http.get(`https://academy-u202309-030-16e3810602c5.herokuapp.com//modules/search/${name}`);
   }
 }
