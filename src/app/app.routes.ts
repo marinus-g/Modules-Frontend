@@ -17,7 +17,7 @@ export const routes: Routes = [
     canActivate: [authenticationGuard],
   },
   {
-    path: 'modules',
+    path: '',
     title: 'Module View',
     canActivate: [authenticationGuard],
     component: ModuleViewComponent
