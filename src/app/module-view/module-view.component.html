@@ -3,8 +3,8 @@
     <h1>Alle Module - sortiert auf einen Blick</h1>
   </div>
   <form class="module-view-search">
-    <div class="searchbar">
-      <input type="search" placeholder="Suche"/>
+    <div class="searchbar" (submit)="search()">
+      <input type="search" [(ngModel)]="searchTerm" name="searchTerm" placeholder="Suche"/>
       <button type="submit">
         go
       </button>

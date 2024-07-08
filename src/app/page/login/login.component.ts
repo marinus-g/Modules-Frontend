@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
-import {AuthService} from "../../service/auth.service";
+import {AuthService} from "../../Service/auth/auth.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @Component({

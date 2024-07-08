@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import {HttpClient, HttpResponse} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {Authentication} from "../model/authentication";
+import {Authentication} from "../../model/authentication";
 import {firstValueFrom, Observable} from "rxjs";
 
 @Injectable({

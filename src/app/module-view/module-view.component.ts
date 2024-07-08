@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from "../Service/data.service";
+import {ModuleService} from "../Service/dataservice/module.service";
 import {NgForOf, NgOptimizedImage} from "@angular/common";
 import {RouterLink, Router} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-module-view',
@@ -9,7 +10,8 @@ import {RouterLink, Router} from "@angular/router";
   imports: [
     NgForOf,
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
+    FormsModule
   ],
   templateUrl: './module-view.component.html',
   styleUrl: './module-view.component.css'
@@ -17,12 +19,13 @@ import {RouterLink, Router} from "@angular/router";
 export class ModuleViewComponent implements OnInit {
   classesData: any;
   tableData: any;
+  searchTerm: string = '';
 
-  constructor(private dataService: DataService, private router: Router) {
+  constructor(private moduleService: ModuleService, private router: Router) {
   }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(data =>{
+    this.moduleService.getData().subscribe(data =>{
       this.classesData = data.classes;
       this.tableData = data.table;
     });
@@ -30,5 +33,11 @@ export class ModuleViewComponent implements OnInit {
 
   navigateToDetail(itemId: number) {
     this.router.navigate(['/detail', itemId]);
+  }
+
+  search() {
+    this.moduleService.searchModules(this.searchTerm).subscribe(data =>{
+      this.tableData = data;
+    })
   }
 }

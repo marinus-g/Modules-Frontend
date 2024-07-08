@@ -10,7 +10,7 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'", "http://localhost:8080"],
       scriptSrcAttr: ["'self'", "'unsafe-inline'"], // Allow inline script attributes
-      imgSrc: ["'self'", "data:", "http://localhost:8080", "https://academy-u202309-030-16e3810602c5.herokuapp.com"],
+      imgSrc: ["'self'", "dataservice:", "http://localhost:8080", "https://academy-u202309-030-16e3810602c5.herokuapp.com"],
       styleSrc: ["'self'", "http://localhost:8080", "https://fonts.googleapis.com", "'unsafe-inline'"],
       connectSrc: ["'self'", "http://localhost:8080", "https://academy-u202309-030-16e3810602c5.herokuapp.com", "https://login.microsoftonline.com"],
       fontSrc: ["'self'", "http://localhost:8080", "https://fonts.gstatic.com"],
