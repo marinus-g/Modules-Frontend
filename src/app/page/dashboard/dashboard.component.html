@@ -1,1 +1,4 @@
-<p>dashboard works!</p>
+<app-class-switch (valueChanged)="handleClassChange($event)"></app-class-switch>
+@if (this.classService.schoolClass != null) {
+  <app-module-list [modules]="modules"></app-module-list>
+}

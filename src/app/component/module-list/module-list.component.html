@@ -1,0 +1,31 @@
+@if (_createModule) {
+  <app-module-create (createdModule)="handleModuleCreate($event)"></app-module-create>
+}
+<div class="container">
+  <h2>Module</h2>
+  <div class="row">
+    <table>
+      <th>Modulname</th>
+      <th>Datum</th>
+      @for (module of modules; track module) {
+        <tr>
+          <td>{{ module.data.name }}</td>
+          <td>{{ module.start_date }}</td>
+        </tr>
+      }
+      @if (isLecturer) {
+        <tr>
+          <td>
+            <select [(ngModel)]="selectedModule" (ngModelChange)="handleAddModule(selectedModule)">
+              <option disabled selected name="add" value="add">Modul hinzufügen</option>
+              @for (module of filteredAllModules(); track module) {
+                <option [ngValue]="module">{{ module.name}}</option>
+              }
+              <option name="create" value="create">Neues Modul erstellen</option>
+            </select>
+          </td>
+        </tr>
+      }
+    </table>
+  </div>
+</div>

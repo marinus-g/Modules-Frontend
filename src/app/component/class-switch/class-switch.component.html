@@ -1,0 +1,4 @@
+<select name="classSelect" [(ngModel)]="selectedClass" (change)="handleClassChange()">
+  <option name="Klasse" selected disabled>Klasse</option>
+  <option name="schoolClass" *ngFor="let schoolClass of schoolClasses" [ngValue]="schoolClass">{{ schoolClass.name }}</option>
+</select>

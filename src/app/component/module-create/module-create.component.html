@@ -1,0 +1,11 @@
+<div>
+  <h1>Neues Modul erstellen</h1>
+  <form (submit)="handleSubmit($event)">
+    <label for="module-name">Modul Name</label>
+    <input name="name" id="module-name" [(ngModel)]="module.name">
+    <label for="module-description">Modul Beschreibung</label>
+    <textarea name="description" id="module-description" [(ngModel)]="module.description"></textarea>
+    <button>Module erstellen</button>
+  </form>
+  <button (submit)="cancelSubmit()">Abbrechen</button>
+</div>
