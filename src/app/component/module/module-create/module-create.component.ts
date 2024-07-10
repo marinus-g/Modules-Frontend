@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {ModuleDto} from "../../model/module";
-import {ModuleService} from "../../service/module.service";
+import {ModuleDto} from "../../../model/module";
+import {ModuleService} from "../../../service/module.service";
 
 @Component({
   selector: 'app-module-create',

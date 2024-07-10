@@ -1,0 +1,8 @@
+<div>
+  <div>
+    <form (submit)="submitForm($event)">
+      <input name="file" [(ngModel)]="excelFile" accept=".xlsx" id="excel-file" type="file">
+      <button>Ergebnisse hochladen</button>
+    </form>
+  </div>
+</div>

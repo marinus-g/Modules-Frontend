@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {SchoolClass} from "../model/class";
 import {environment} from "../../environments/environment";
 import {firstValueFrom} from "rxjs";
-import {ModuleDto} from "../model/module";
+import {ClassModuleDto, ModuleDto} from "../model/module";
 
 @Injectable({
   providedIn: 'root'
@@ -25,10 +25,29 @@ export class ClassService {
     const response = await firstValueFrom(response$)
 
     if (response.status === 200) {
+      const schoolClass = response.body as SchoolClass;
       if (set) {
-        this._schoolClass = response.body as SchoolClass;
+        this._schoolClass = schoolClass
       }
-      return response.body as SchoolClass;
+      return schoolClass
+    } else {
+      throw new Error(response.body as unknown as string);
+    }
+  }
+
+  async fetchClassById(id: number, set: boolean): Promise<SchoolClass> {
+    const response$ = this.http.get<SchoolClass>(environment.apiUrl + '/class/' + id, {
+      observe: 'response',
+      withCredentials: true
+    })
+    const response = await firstValueFrom(response$)
+
+    if (response.status === 200) {
+      const schoolClass = response.body as SchoolClass;
+      if (set) {
+        this._schoolClass = schoolClass
+      }
+      return schoolClass;
     } else {
       throw new Error(response.body as unknown as string);
     }
@@ -47,7 +66,7 @@ export class ClassService {
     }
   }
 
-  get schoolClass(): SchoolClass| null {
+  get schoolClass(): SchoolClass | null {
     return this._schoolClass;
   }
 
@@ -61,13 +80,12 @@ export class ClassService {
       withCredentials: true,
     })
 
-    const response = await  firstValueFrom(response$)
+    const response = await firstValueFrom(response$)
     if (response.status === 201) {
       console.log(response)
       return response.headers.get("Location")
     } else {
       throw new Error(response.body as unknown as string);
     }
-
   }
 }

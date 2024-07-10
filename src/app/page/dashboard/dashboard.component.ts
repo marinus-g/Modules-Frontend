@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ModuleListComponent} from "../../component/module-list/module-list.component";
+import {ModuleListComponent} from "../../component/module/module-list/module-list.component";
 import {ClassModuleDto} from "../../model/module";
 import {ModuleService} from "../../service/module.service";
 import {ClassService} from "../../service/class.service";

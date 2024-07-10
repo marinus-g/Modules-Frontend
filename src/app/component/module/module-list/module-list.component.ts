@@ -1,12 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {ClassModuleDto, ModuleDto} from "../../model/module";
+import {Router, RouterLink} from "@angular/router";
+import {ClassModuleDto, ModuleDto} from "../../../model/module";
 import {NgForOf} from "@angular/common";
-import {AuthService} from "../../service/auth.service";
+import {AuthService} from "../../../service/auth.service";
 import {FormsModule} from "@angular/forms";
 import {ModuleCreateComponent} from "../module-create/module-create.component";
-import {ModuleService} from "../../service/module.service";
-import {ClassService} from "../../service/class.service";
+import {ModuleService} from "../../../service/module.service";
+import {ClassService} from "../../../service/class.service";
+import {routes} from "../../../app.routes";
 
 @Component({
   selector: 'app-module-list',
@@ -31,7 +32,8 @@ export class ModuleListComponent implements OnInit {
   protected _createModule: boolean = false;
   selectedModule: ModuleDto | string = 'add';
 
-  constructor(protected authService: AuthService, private moduleService: ModuleService, private classService: ClassService) {
+  constructor(protected authService: AuthService,
+              private moduleService: ModuleService, private classService: ClassService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -44,10 +46,6 @@ export class ModuleListComponent implements OnInit {
           });
         }
       })
-  }
-
-  addModule() {
-
   }
 
   createModule() {
@@ -91,5 +89,20 @@ export class ModuleListComponent implements OnInit {
     return this.allModules.filter(value => {
       return !this.modules.find(module => module.data.id === value.id);
     })
+  }
+
+  openModulePage(module: ClassModuleDto) {
+    if (!this.classService.schoolClass) {
+      return;
+    }
+    this.router.navigateByUrl(this.router.createUrlTree([
+      '/class',
+      this.classService.schoolClass.id,
+      'module',
+      module.data.id
+    ]))
+      .catch(reason => {
+        console.error(reason);
+      })
   }
 }

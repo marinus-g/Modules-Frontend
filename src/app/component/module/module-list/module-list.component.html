@@ -8,7 +8,7 @@
       <th>Modulname</th>
       <th>Datum</th>
       @for (module of modules; track module) {
-        <tr>
+        <tr (click)="openModulePage(module)">
           <td>{{ module.data.name }}</td>
           <td>{{ module.start_date }}</td>
         </tr>
