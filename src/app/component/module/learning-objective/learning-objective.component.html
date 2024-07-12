@@ -7,6 +7,11 @@
         <module-learning-objective-upload *ngSwitchCase="false" [classModuleId]="classModule?.id" s
                                           (submittedObjective)="refreshComponent($event)"></module-learning-objective-upload>
       </ng-container>
+    } @else {
+      <ng-container [ngSwitch]="isExam">
+        <h3 *ngSwitchCase="false">Für dieses Modul gab es bisher noch keine Lernzielkontrolle</h3>
+        <app-learning-objective-result *ngSwitchCase="true" [exam]="exam"></app-learning-objective-result>
+      </ng-container>
     }
   }
 </div>

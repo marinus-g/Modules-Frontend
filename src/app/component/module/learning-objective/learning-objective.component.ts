@@ -5,6 +5,7 @@ import {LearningObjectiveResultsComponent} from "./learning-objective-results/le
 import {ClassModuleDto} from "../../../model/module";
 import {ExamService} from "../../../service/exam.service";
 import {Exam} from "../../../model/exam";
+import {LearningObjectiveResultComponent} from "./learning-objective-result/learning-objective-result.component";
 
 @Component({
   selector: 'app-learning-objective',
@@ -14,7 +15,8 @@ import {Exam} from "../../../model/exam";
     LearningObjectiveUploadComponent,
     NgSwitchCase,
     NgSwitch,
-    LearningObjectiveResultsComponent
+    LearningObjectiveResultsComponent,
+    LearningObjectiveResultComponent
   ],
   templateUrl: './learning-objective.component.html',
   styleUrl: './learning-objective.component.css'

@@ -1,0 +1,22 @@
+<ng-container *ngIf="getExamResult">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>Status</th>
+        <th>Erreichte Punkte</th>
+        <th>Maximale Punkte</th>
+        <th>Note</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{ getStateDescription }}</td>
+        <td>{{ getExamResult.score }}</td>
+        <td>{{ getMaxScore }}</td>
+        <td>{{ getExamResult.grade }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
