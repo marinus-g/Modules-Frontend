@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Student</th>
+      <th>Status</th>
+      <th>Erreichte Punkte</th>
+      <th>Maximale Punkte</th>
+      <th>Note</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let result of exam?.exam_results">
+      <td>{{ result.first_name + ' ' + result.last_name }}</td>
+      <td>{{ getStateDescription(result.state) }}</td>
+      <td>{{ result.score }}</td>
+      <td>{{ exam?.max_score }}</td>
+      <td>{{ result.grade }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

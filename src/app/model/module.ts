@@ -1,7 +1,9 @@
 export interface ClassModuleDto {
-  class_id: number;
+  id: number;
+  class_id: string;
   start_date: string;
   data: ModuleDto;
+  exam_id?: number | null;
 }
 
 export interface ModuleDto {

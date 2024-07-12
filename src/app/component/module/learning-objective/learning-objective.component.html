@@ -1,0 +1,12 @@
+<div>
+  @if (isLoaded) {
+    <h3>Lernzielkontrolle</h3>
+    @if (isLecturer) {
+      <ng-container [ngSwitch]="isExam">
+        <module-learning-objective-results [exam]="this.exam" [classModuleDto]="classModule" *ngSwitchCase="true"></module-learning-objective-results>
+        <module-learning-objective-upload *ngSwitchCase="false" [classModuleId]="classModule?.id" s
+                                          (submittedObjective)="refreshComponent($event)"></module-learning-objective-upload>
+      </ng-container>
+    }
+  }
+</div>

@@ -2,18 +2,7 @@
   <h1>{{ schoolClass.name }}</h1>
   <h2>{{ classModuleDto.data.name }}</h2>
   <h3>{{ classModuleDto.data.description }}</h3>
-  @if (isLecturer) {
-    <div>
-      <h3>Lernzielkontrolle</h3>
-      @if (true) {
-      <module-learning-object-upload></module-learning-object-upload>
-      } @else {
-
-      }
-    </div>
-  } @else if (true) {
-    <div>
-      <h3>Lernzielkontrolle</h3>
-    </div>
-  }
+  <ng-container *ngIf="classModuleDto.id != -1">
+    <app-learning-objective [isLecturer]="isLecturer" [classModule]="classModuleDto"></app-learning-objective>
+  </ng-container>
 </div>

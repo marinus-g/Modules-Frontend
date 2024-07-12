@@ -3,29 +3,32 @@
 }
 <div class="container">
   <h2>Module</h2>
-  <div class="row">
+  <div class="table">
     <table>
-      <th>Modulname</th>
-      <th>Datum</th>
-      @for (module of modules; track module) {
-        <tr (click)="openModulePage(module)">
-          <td>{{ module.data.name }}</td>
-          <td>{{ module.start_date }}</td>
-        </tr>
-      }
-      @if (isLecturer) {
-        <tr>
-          <td>
-            <select [(ngModel)]="selectedModule" (ngModelChange)="handleAddModule(selectedModule)">
-              <option disabled selected name="add" value="add">Modul hinzufügen</option>
-              @for (module of filteredAllModules(); track module) {
-                <option [ngValue]="module">{{ module.name}}</option>
-              }
-              <option name="create" value="create">Neues Modul erstellen</option>
-            </select>
-          </td>
-        </tr>
-      }
+      <thead>
+      <tr>
+        <th>Modulname</th>
+        <th>Datum</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let module of modules">
+        <tr app-module-list-entry [module]="module"></tr>
+      </ng-container>
+        @if (isLecturer) {
+          <tr>
+            <td>
+              <select [(ngModel)]="selectedModule" (ngModelChange)="handleAddModule(selectedModule)">
+                <option disabled selected name="add" value="add">Modul hinzufügen</option>
+                @for (module of filteredAllModules(); track module) {
+                  <option [ngValue]="module">{{ module.name }}</option>
+                }
+                <option name="create" value="create">Neues Modul erstellen</option>
+              </select>
+            </td>
+          </tr>
+        }
+      </tbody>
     </table>
   </div>
 </div>

@@ -1,2 +1,6 @@
 <router-outlet>
 </router-outlet>
+<ng-container></ng-container>
+<ng-container *ngIf="showButton">
+  <button class="dev-button" (click)="toggleLecturer()">Toggle Dozent</button>
+</ng-container>

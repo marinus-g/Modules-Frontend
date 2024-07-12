@@ -6,14 +6,18 @@ import {ClassModuleDto} from "../../../model/module";
 import {SchoolClass} from "../../../model/class";
 import {AuthService} from "../../../service/auth.service";
 import {
-  LearningObjectUploadComponent
-} from "../../../component/module/learning-object-upload/learning-object-upload.component";
+  LearningObjectiveUploadComponent
+} from "../../../component/module/learning-objective/learning-object-upload/learning-objective-upload.component";
+import {LearningObjectiveComponent} from "../../../component/module/learning-objective/learning-objective.component";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'module-view',
   standalone: true,
   imports: [
-    LearningObjectUploadComponent
+    LearningObjectiveUploadComponent,
+    LearningObjectiveComponent,
+    NgIf
   ],
   templateUrl: './module-view.component.html',
   styleUrl: './module-view.component.css'
@@ -26,8 +30,9 @@ export class ModuleViewComponent {
       name: '',
       description: ''
     },
-    class_id: 0,
-    start_date: 'Unknown'
+    class_id: '',
+    start_date: 'Unknown',
+    id: -1,
   };
   protected schoolClass: SchoolClass = {
     id: 0,
@@ -47,7 +52,8 @@ export class ModuleViewComponent {
   private extractParams(params: any) {
     const classId = params.get('classId');
     const moduleId = params.get('moduleId');
-    if (classId === null || moduleId === null || !classId.match(/^[0-9]+$/) || !moduleId.match(/^[0-9]+$/)) {
+    // the class id should match a uuid
+    if (classId === null || moduleId === null || !classId.match(/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/) || !moduleId.match(/^[0-9]+$/)) {
       this.router.navigate(['/'])
         .catch(reason => console.error(reason));
       return;

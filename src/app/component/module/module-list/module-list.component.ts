@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router, RouterLink} from "@angular/router";
 import {ClassModuleDto, ModuleDto} from "../../../model/module";
-import {NgForOf} from "@angular/common";
+import {NgComponentOutlet, NgForOf, NgTemplateOutlet} from "@angular/common";
 import {AuthService} from "../../../service/auth.service";
 import {FormsModule} from "@angular/forms";
 import {ModuleCreateComponent} from "../module-create/module-create.component";
 import {ModuleService} from "../../../service/module.service";
 import {ClassService} from "../../../service/class.service";
-import {routes} from "../../../app.routes";
+import {ModuleListEntryComponent} from "./module-list-entry/module-list-entry.component";
 
 @Component({
   selector: 'app-module-list',
@@ -16,7 +16,10 @@ import {routes} from "../../../app.routes";
     RouterLink,
     NgForOf,
     FormsModule,
-    ModuleCreateComponent
+    ModuleCreateComponent,
+    ModuleListEntryComponent,
+    NgTemplateOutlet,
+    NgComponentOutlet
   ],
   templateUrl: './module-list.component.html',
   styleUrl: './module-list.component.css'
@@ -33,7 +36,7 @@ export class ModuleListComponent implements OnInit {
   selectedModule: ModuleDto | string = 'add';
 
   constructor(protected authService: AuthService,
-              private moduleService: ModuleService, private classService: ClassService, private router: Router) {
+              private moduleService: ModuleService, private classService: ClassService) {
   }
 
   ngOnInit(): void {
@@ -89,20 +92,5 @@ export class ModuleListComponent implements OnInit {
     return this.allModules.filter(value => {
       return !this.modules.find(module => module.data.id === value.id);
     })
-  }
-
-  openModulePage(module: ClassModuleDto) {
-    if (!this.classService.schoolClass) {
-      return;
-    }
-    this.router.navigateByUrl(this.router.createUrlTree([
-      '/class',
-      this.classService.schoolClass.id,
-      'module',
-      module.data.id
-    ]))
-      .catch(reason => {
-        console.error(reason);
-      })
   }
 }

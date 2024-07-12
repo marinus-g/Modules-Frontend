@@ -1,7 +1,8 @@
 <div>
   <div>
+    <h2>Lernzielkontrolle hochladen</h2>
     <form (submit)="submitForm($event)">
-      <input name="file" [(ngModel)]="excelFile" accept=".xlsx" id="excel-file" type="file">
+      <input #fileInput name="file" accept=".xlsx" id="excel-file" type="file">
       <button>Ergebnisse hochladen</button>
     </form>
   </div>

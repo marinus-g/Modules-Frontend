@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LearningObjectUploadComponent } from './learning-object-upload.component';
+import { LearningObjectiveUploadComponent } from './learning-objective-upload.component';
 
 describe('LearningObjectUploadComponent', () => {
-  let component: LearningObjectUploadComponent;
-  let fixture: ComponentFixture<LearningObjectUploadComponent>;
+  let component: LearningObjectiveUploadComponent;
+  let fixture: ComponentFixture<LearningObjectiveUploadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LearningObjectUploadComponent]
+      imports: [LearningObjectiveUploadComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LearningObjectUploadComponent);
+    fixture = TestBed.createComponent(LearningObjectiveUploadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
