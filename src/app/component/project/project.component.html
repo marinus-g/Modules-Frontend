@@ -1,0 +1,15 @@
+@if (!classModule?.project_id) {
+  @if (isLecturer && classModule && classModule.id && classModule.class_id && classModule.data && classModule.data.id) {
+    <app-project-create [classId]="classModule.class_id" [moduleId]="classModule.data.id"></app-project-create>
+  } @else {
+    <h3>Es wurde noch kein Projekt erstellt {{ classModule?.class_id}}</h3>
+  }
+} @else {
+  @if (isLecturer) {
+    <app-project-edit [projectId]="classModule?.project_id"></app-project-edit>
+    <app-team-list [projectId]="classModule?.project_id"></app-team-list>
+    <app-team-create [projectId]="classModule?.project_id" [classId]="classModule?.project_id"></app-team-create>
+  } @else {
+    <app-project-view [projectId]="classModule?.project_id"></app-project-view>
+  }
+}

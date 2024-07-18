@@ -4,5 +4,6 @@
   <h3>{{ classModuleDto.data.description }}</h3>
   <ng-container *ngIf="classModuleDto.id != -1">
     <app-learning-objective [isLecturer]="isLecturer" [classModule]="classModuleDto"></app-learning-objective>
+    <app-project [isLecturer]="isLecturer" [classModule]="classModuleDto"></app-project>
   </ng-container>
 </div>

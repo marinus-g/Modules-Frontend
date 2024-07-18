@@ -4,6 +4,7 @@ export interface ClassModuleDto {
   start_date: string;
   data: ModuleDto;
   exam_id?: number | null;
+  project_id?: number | undefined;
 }
 
 export interface ModuleDto {

@@ -4,6 +4,7 @@ import {SchoolClass} from "../model/class";
 import {environment} from "../../environments/environment";
 import {firstValueFrom} from "rxjs";
 import {ClassModuleDto, ModuleDto} from "../model/module";
+import User from "../model/user";
 
 @Injectable({
   providedIn: 'root'
@@ -86,6 +87,25 @@ export class ClassService {
       return response.headers.get("Location")
     } else {
       throw new Error(response.body as unknown as string);
+    }
+  }
+
+  async fetchUsersInClass(classId: number) {
+    const response$ = this.http.get<User[]>(environment.apiUrl + '/class/' + classId + '/users', {
+      observe: 'response',
+      withCredentials: true,
+    })
+
+    try {
+      const response = await firstValueFrom(response$)
+      if (response.status === 200) {
+        return response.body
+      } else {
+        throw new Error(response.body as unknown as string);
+      }
+    } catch (error) {
+      console.error(error)
+      return []
     }
   }
 }

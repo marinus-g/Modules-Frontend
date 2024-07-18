@@ -10,6 +10,7 @@ import {
 } from "../../../component/module/learning-objective/learning-object-upload/learning-objective-upload.component";
 import {LearningObjectiveComponent} from "../../../component/module/learning-objective/learning-objective.component";
 import {NgIf} from "@angular/common";
+import {ProjectComponent} from "../../../component/project/project.component";
 
 @Component({
   selector: 'module-view',
@@ -17,7 +18,8 @@ import {NgIf} from "@angular/common";
   imports: [
     LearningObjectiveUploadComponent,
     LearningObjectiveComponent,
-    NgIf
+    NgIf,
+    ProjectComponent
   ],
   templateUrl: './module-view.component.html',
   styleUrl: './module-view.component.css'

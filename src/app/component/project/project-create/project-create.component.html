@@ -1,0 +1,8 @@
+<form (submit)="handleSubmit($event)">
+  <h1>Neues Projekt erstellen</h1>
+  <label for="project-name">Projekt Name</label>
+  <input name="name" id="project-name" [(ngModel)]="name">
+  <label for="project-description">Projekt Beschreibung</label>
+  <textarea name="description" id="project-description" [(ngModel)]="description"></textarea>
+  <button>Projekt erstellen</button>
+</form>

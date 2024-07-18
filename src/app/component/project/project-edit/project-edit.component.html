@@ -1,0 +1,13 @@
+<div>
+  <h1>Projekt bearbeiten</h1>
+  <form (submit)="handleProjectEditSubmit($event)">
+    <label for="project-name">Projekt Name</label>
+    <input name="name" id="project-name" [(ngModel)]="project.name">
+    <label for="project-description">Projekt Beschreibung</label>
+    <textarea name="description" id="project-description" [(ngModel)]="project.description"></textarea>
+    <button>Projekt bearbeiten</button>
+  </form>
+  <div>
+
+  </div>
+</div>
